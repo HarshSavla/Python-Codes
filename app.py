@@ -5,7 +5,7 @@ app = Flask(__name__)
 @app.route('/')
 def homepage():
 
-    return "<h1>Hello heroku</h1><p>It is currently {time}.</p>"
+    return "navbar.html"
 
 @app.route('/contact')
 def contact():
