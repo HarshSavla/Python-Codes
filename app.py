@@ -1,11 +1,11 @@
-from flask import Flask
+from flask import Flask, render_template
 from datetime import datetime
 app = Flask(__name__)
 
 @app.route('/')
 def homepage():
 
-    return "navbar.html"
+    return render_template('navbar.html')
 
 @app.route('/contact')
 def contact():
