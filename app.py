@@ -5,7 +5,7 @@ app = Flask(__name__)
 @app.route('/')
 def homepage():
 
-    return render_template('navbar.html')
+    return render_template('today.html')
 
 @app.route('/contact')
 def contact():
