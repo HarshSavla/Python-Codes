@@ -10,7 +10,7 @@ def homepage():
 @app.route('/contact')
 def contact():
 
-    return "cont num; 1234, EMILID;fere"
+    return render_template('This Month.html')
 
 if __name__ == '__main__':
     app.run(debug=True, use_reloader=True)
