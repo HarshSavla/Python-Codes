@@ -13,12 +13,12 @@ def month():
     return render_template('This Month.html')
 	
 @app.route('/year')
-def month():
+def year():
 
     return render_template('This Year.html')
 
 @app.route('/register')
-def month():
+def register():
 
     return render_template('Register.html')
 
