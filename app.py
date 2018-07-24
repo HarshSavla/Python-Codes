@@ -5,7 +5,7 @@ app = Flask(__name__)
 @app.route('/')
 def homepage():
 
-    return render_template('today.html')
+    return render_template('Today.html')
 
 @app.route('/contact')
 def contact():
