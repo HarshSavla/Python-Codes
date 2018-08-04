@@ -34,7 +34,7 @@ def trackPerson(device_id, person_id):
 @app.route('/')
 def homepage():
 
-    return render_template('Today.html', location=location, bandname=bandname)
+    return render_template('Today.html', today=data_today)
 
 if __name__ == '__main__':
     app.run(debug=True, use_reloader=True)
