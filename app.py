@@ -37,7 +37,7 @@ def trackPerson(device_id, person_id):
 	else:
 	    location.append(loc)
 	    bandname.append(ban)
-	    return location[0]
+	return location[0]
 
 
 @app.route('/')
