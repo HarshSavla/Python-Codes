@@ -35,7 +35,7 @@ def trackPerson(device_id, person_id):
 
     return "OK"
 
-length = len(location) - 1
+length = len(location) 
 
 @app.route('/')
 def homepage():
