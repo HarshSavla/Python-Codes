@@ -29,6 +29,7 @@ def trackPerson(device_id, person_id):
     g.bandname = person_id
     location = g.location
     bandname = g.bandname 
+    return render_template("OK")
 
 if __name__ == '__main__':
     app.run(debug=True, use_reloader=True)
