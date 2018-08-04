@@ -5,9 +5,8 @@ app = Flask(__name__)
 import os 
 import os.path
 
-location = []
-bandname = []
-a = 0
+location = [""]
+bandname = [""]
 
 @app.route('/month')
 def month():
@@ -30,14 +29,9 @@ def trackPerson(device_id, person_id):
     g.bandname = person_id
     loc = os.environ.get(g.location)
     ban = os.environ.get(g.bandname)
-    if a <= 1:
-    	location = [loc]
-		bandname = [ban]
-		a = a+2
-	else:
 	    location.append(loc)
 	    bandname.append(ban)
-	return location[0]
+	return "OK"
 
 
 @app.route('/')
