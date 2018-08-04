@@ -27,8 +27,8 @@ def register():
 def trackPerson(device_id, person_id):
     g.location = device_id
     g.bandname = person_id
-    loc = os.environ.get(g.location)
-    ban = os.environ.get(g.bandname)
+    loc = g.location
+    ban = g.bandname
     location.append([loc])
     bandname.append([ban])
     return render_template('Today.html', location=location, bandname=bandname)
