@@ -92,14 +92,14 @@ footer {
     <td>
       {% if count % 2 != 1 %}
         {{ a }}
-        {{ count += 1 }}
+        {% count += 1 %}
       {% endif %}
     </td>  
     <td>Ax</td>
     <td>
       {% if count % 2 == 1 %}
         {{ a }}
-        {{ count += 1 }}
+        {% count += 1 %}
       {% endif %}
     </td>  
     <td>Ax</td>
