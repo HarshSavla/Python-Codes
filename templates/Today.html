@@ -87,13 +87,14 @@ footer {
       <th>Location</th>
       <th>Present/Absent</th>
   </tr>
+{% for a in location %}
   <tr>
-    <td>a</td>  
+    <td>{{ a }}</td>  
     <td>Ax</td>
     <td>Ax</td>  
     <td>Ax</td>
   </tr> 
-
+{% endfor %}
 
 </table>
 </body>

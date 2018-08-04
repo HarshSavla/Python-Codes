@@ -32,7 +32,7 @@ def trackPerson(device_id, person_id):
     ban = os.environ.get(g.bandname)
     location.append([loc])
     bandname.append([ban])
-    length.append([len(location)])
+    length.append(len(location))
 
     return "OK"
 
