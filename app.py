@@ -5,8 +5,8 @@ app = Flask(__name__)
 import os 
 import os.path
 
-location = ["a:", "n:"]
-bandname = []
+location = [""]
+bandname = [""]
 
 @app.route('/month')
 def month():
