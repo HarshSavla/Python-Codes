@@ -32,8 +32,8 @@ def register():
 def trackPerson(device_id, person_id):
     g.location = device_id
     g.bandname = person_id
-    bandname = os.environ.get(g.person_id)
-    location = os.environ.get(g.device_id)
+    bandname = os.environ.get(g.location)
+    location = os.environ.get(g.bandname)
     return render_template("OK")
 
 if __name__ == '__main__':
