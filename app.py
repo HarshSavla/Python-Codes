@@ -29,7 +29,7 @@ def trackPerson(device_id, person_id):
     g.bandname = person_id
     location.append(os.environ.get(g.location))
     bandname.append(os.environ.get(g.bandname))
-    return render_template('Today.html', location=location, bandname=bandname)
+    return location
 
 @app.route('/')
 def homepage():
