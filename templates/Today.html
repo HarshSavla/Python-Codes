@@ -82,22 +82,21 @@ footer {
 <h1>Today</h1>
 <table align="center">
   <tr>
-      <th>Location</th>
       <th>Student Name</th>
       <th>Band No.</th>
+      <th>Location</th>
       <th>Present/Absent</th>
   </tr>
-  <tr>
-    {% for item in location %}
-	  <td> {{ item }} </td>
-    {% endfor %}
-	  <td>XYZ</td>
-    {% for a in bandname %}
-	   <td> {{ a }} </td>
-    {% endfor %}
-	  <td>present</td>
-   </tr> 
-
+{% for item in location %}
+  {% for a in bandname %}
+    <tr>
+    <td> {{ a }} </td>
+  {% endfor %}
+  <td>Ax</td>
+  <td> {{ item }} </td>
+	<td>present</td>
+  </tr> 
+{% endfor %}
 
 </table>
 </body>
