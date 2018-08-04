@@ -28,7 +28,7 @@ def trackPerson(device_id, person_id):
     g.bandname = person_id
     loc = os.environ.get(g.location)
     ban = os.environ.get(g.bandname)
-    data_today = data_today.extend([loc, ban])
+    data_today.extend([loc, ban])
     return "oK"
 
 @app.route('/')
