@@ -87,19 +87,11 @@ footer {
       <th>Location</th>
       <th>Present/Absent</th>
   </tr>
-{% for a in data %}
+{% for a in location %}
   <tr>
-    <td>
-      {% if count % 2 != 1 %}
-        {{ a }}
-      {% endif %}
-    </td>  
+    <td>{{ a }}</td>  
     <td>Ax</td>
-    <td>
-      {% if count % 2 == 1 %}
-        {{ a }}
-      {% endif %}
-    </td>  
+    <td>{{ bandname(length) }}</td>  
     <td>Ax</td>
   </tr> 
 {% endfor %}

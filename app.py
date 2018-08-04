@@ -5,7 +5,8 @@ app = Flask(__name__)
 import os 
 import os.path
 
-data_today = []
+location = []
+bandname = []
 
 @app.route('/month')
 def month():
@@ -28,13 +29,17 @@ def trackPerson(device_id, person_id):
     g.bandname = person_id
     loc = os.environ.get(g.location)
     ban = os.environ.get(g.bandname)
-    data_today.extend([loc, ban])
+    location.append([loc])
+    bandname.append([ban])
+
     return "OK"
+
+length = len(location) - 1
 
 @app.route('/')
 def homepage():
 
-    return render_template('Today.html', data=data_today, count=0)
+    return render_template('Today.html', location=location, bandname=bandname, length = length)
 
 if __name__ == '__main__':
     app.run(debug=True, use_reloader=True)
