@@ -79,7 +79,7 @@ footer {
   <a href = "https://polar-mountain-37591.herokuapp.com/register">Register</a></p>
 </nav>
 
-<h1> {{ location }} </h1>
+<h1> {{ Location }} </h1>
 <table align="center">
   <tr>
       <th>Student Name</th>
@@ -89,13 +89,13 @@ footer {
   </tr>
 {% for a in location %}
   <tr>
-    {% for b in bandname %}
-      <td> {{ b }} </td>
-    {% endfor %}
+  {% for b in bandname %}
+    <td> {{ b }} </td>
+  {% endfor %}
     <td>Ax</td>
-    {% for c in location %}
-      <td> {{ c }} </td>
-    {% endfor %}
+  {% for c in location %}
+    <td> {{ c }} </td>
+  {% endfor %}
   	<td>present</td>
   </tr> 
 {% endfor %}
