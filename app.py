@@ -40,7 +40,7 @@ length = len(location) - 1
 @app.route('/')
 def homepage():
 
-    return render_template('Today.html', location=location, bandname=bandname, length = length, L=l)
+    return render_template('Today.html', location=location, bandname=bandname, length = length, L=L)
 
 if __name__ == '__main__':
     app.run(debug=True, use_reloader=True)
