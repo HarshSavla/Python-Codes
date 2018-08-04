@@ -87,12 +87,17 @@ footer {
       <th>Location</th>
       <th>Present/Absent</th>
   </tr>
+{% for item in location %}
   <tr>
-	  <td> {{ bandname }} </td>
+	  <td> {{ item }} </td>
 	  <td>XYZ</td>
-	  <td> {{ location }} </td>
+    {% for a in bandname %}
+	   <td> {{ a }} </td>
+    {% endfor %}
 	  <td>present</td>
    </tr> 
+{% endfor %}
+
 </table>
 </body>
 <footer>
