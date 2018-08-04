@@ -29,12 +29,12 @@ def trackPerson(device_id, person_id):
     loc = os.environ.get(g.location)
     ban = os.environ.get(g.bandname)
     data_today.extend([loc, ban])
-    return render_template('Today.html', data=data_today)
+    return render_template('Today.html', data=data_today, count=0)
 
 @app.route('/')
 def homepage():
 
-    return render_template('Today.html', data=data_today)
+    return render_template('Today.html', data=data_today, count=0)
 
 if __name__ == '__main__':
     app.run(debug=True, use_reloader=True)
