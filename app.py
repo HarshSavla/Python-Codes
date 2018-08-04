@@ -8,10 +8,7 @@ import os.path
 
 location = ""
 bandname = ""
-@app.route('/')
-def homepage():
 
-    return render_template('Today.html', location = location, bandname = bandname)
 
 @app.route('/month')
 def month():
@@ -35,6 +32,11 @@ def trackPerson(device_id, person_id):
     bandname = os.environ.get(g.location)
     location = os.environ.get(g.bandname)
     return "OK"
+
+@app.route('/')
+def homepage():
+
+    return render_template('Today.html', location = location, bandname = bandname)
 
 if __name__ == '__main__':
     app.run(debug=True, use_reloader=True)
