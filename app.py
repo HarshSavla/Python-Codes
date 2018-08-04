@@ -34,7 +34,7 @@ def trackPerson(device_id, person_id):
     g.bandname = person_id
     bandname = os.environ.get(g.location)
     location = os.environ.get(g.bandname)
-    return render_template("OK")
+    return "OK"
 
 if __name__ == '__main__':
     app.run(debug=True, use_reloader=True)
