@@ -87,16 +87,17 @@ footer {
       <th>Student Name</th>
       <th>Present/Absent</th>
   </tr>
-{% for item in location %}
   <tr>
+    {% for item in location %}
 	  <td> {{ item }} </td>
+    {% endfor %}
 	  <td>XYZ</td>
     {% for a in bandname %}
 	   <td> {{ a }} </td>
     {% endfor %}
 	  <td>present</td>
    </tr> 
-{% endfor %}
+
 
 </table>
 </body>
