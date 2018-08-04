@@ -90,14 +90,14 @@ footer {
 {% for a in data %}
   <tr>
     <td>
-      {% if count/2 =! 0 %}
+      {% if count % 2 =! 0 %}
         {{ a }}
         {{ count += 1 }}
       {% endif %}
     </td>  
     <td>Ax</td>
     <td>
-      {% if count/2 == 0 %}
+      {% if count % 2 == 0 %}
         {{ a }}
         {{ count += 1 }}
       {% endif %}
