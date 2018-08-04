@@ -6,8 +6,8 @@ import os
 import os.path
 
 
-location = ""
-bandname = ""
+location = "XYZ"
+bandname = "ABCD"
 
 
 @app.route('/month')
