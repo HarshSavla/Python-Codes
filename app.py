@@ -31,8 +31,8 @@ def trackPerson(device_id, person_id):
     loc = os.environ.get(g.location)
     ban = os.environ.get(g.bandname)
     if a <= 1:
-    	loc = [loc]
-		ban = [ban]
+    	location = [loc]
+		bandname = [ban]
 		a = a+2
 	else:
 	    location.append(loc)
