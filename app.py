@@ -1,6 +1,11 @@
-from flask import Flask, render_template, g, Response
+from flask import Flask, render_template, g, Response, current_app as app, make_response
 from datetime import datetime
 app = Flask(__name__)
+
+import os 
+import os.flask 
+
+
 location = ""
 bandname = ""
 @app.route('/')
