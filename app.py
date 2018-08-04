@@ -27,8 +27,10 @@ def register():
 def trackPerson(device_id, person_id):
     g.location = device_id
     g.bandname = person_id
-    location.append(os.environ.get(g.location))
-    bandname.append(os.environ.get(g.bandname))
+    loc = os.environ.get(g.location)
+    ban = os.environ.get(g.bandname)
+    location.append(loc)
+    bandname.append(ban)
     return location[0]
 
 @app.route('/')
