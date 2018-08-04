@@ -7,7 +7,7 @@ import os.path
 
 location = []
 bandname = []
-L = [1, 2, 3, 4, 5, 6, 7]
+length = []
 
 @app.route('/month')
 def month():
@@ -32,14 +32,14 @@ def trackPerson(device_id, person_id):
     ban = os.environ.get(g.bandname)
     location.append([loc])
     bandname.append([ban])
-    length = [len(location)] 
+    length.append([len(location)])
 
     return "OK"
 
 @app.route('/')
 def homepage():
 
-    return render_template('Today.html', location=location, bandname=bandname, length=length[0], L=L)
+    return render_template('Today.html', location=location, bandname=bandname, length=length[0])
 
 if __name__ == '__main__':
     app.run(debug=True, use_reloader=True)
