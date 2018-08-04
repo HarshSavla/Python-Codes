@@ -89,13 +89,13 @@ footer {
   </tr>
 {% for a in location %}
   <tr>
-  {% for b in bandname %}
-    <td> {{ b }} </td>
-  {% endfor %}
+    {% for b in bandname %}
+      <td> {{ b }} </td>
+    {% endfor %}
     <td>Ax</td>
-  {% for c in location %}
-    <td> {{ c }} </td>
-  {% endfor %}
+    {% for c in location %}
+      <td> {{ c }} </td>
+    {% endfor %}
   	<td>present</td>
   </tr> 
 {% endfor %}
