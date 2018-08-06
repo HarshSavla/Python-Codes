@@ -7,7 +7,6 @@ import os.path
 
 location = []
 bandname = []
-length = []
 
 @app.route('/month')
 def month():
@@ -41,7 +40,7 @@ loca = location[-1]
 @app.route('/')
 def homepage():
 
-    return render_template('Today.html', loca=loca, band=band)
+    return render_template('Today.html', loca=loca, band=band, location=location)
 
 if __name__ == '__main__':
     app.run(debug=True, use_reloader=True)
