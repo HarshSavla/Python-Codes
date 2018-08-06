@@ -78,7 +78,7 @@ footer {
   <a href="https://polar-mountain-37591.herokuapp.com/year">This Year</a>
   <a href = "https://polar-mountain-37591.herokuapp.com/register">Register</a></p>
 </nav>
-{% set count = 0 %}
+{% set count = data[-1] %}
 <h1> Today </h1>
 <table align="center">
   <tr>
@@ -89,19 +89,9 @@ footer {
   </tr>
 {% for a in data %}
   <tr>
-    <td>
-      {% if count%2 == 1 %}
-        {{ a }}
-      {% set count = count + 1 %}
-      {% endif %}
-    </td>  
+    <td>{{ count }}</td>  
     <td>Ax</td>
-    <td>
-      {% if count%2 != 1 %}
-        {{ a }}
-      {% set count = count + 1 %}
-      {% endif %}
-    </td>
+    <td>    </td>
     <td>Ax</td>
   </tr> 
 {% endfor %}
