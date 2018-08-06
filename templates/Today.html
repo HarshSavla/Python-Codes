@@ -86,9 +86,11 @@ footer {
       <th>Location</th>
       <th>Present/Absent</th>
   </tr>
+{% set count = 0 %}
 {% for a in name %}
-  {% set stuname = name[-1] %}
-  {% set loc = location[-1] %}
+  {% set stuname = name[count] %}
+  {% set loc = location[count] %}
+  {% set count = count+1 %}
   <tr>
     <td>{{ stuname }}</td>  
     <td>Ax</td>
