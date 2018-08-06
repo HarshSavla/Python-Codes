@@ -88,8 +88,8 @@ footer {
   </tr>
 {% set H = 1 %}
 {% for b in L %}
+  {% set H = 2 %}
   {{ H }}
-  {% reset H = 2 %}
 {% endfor %}
 {% set count = 0 %}
 {% for a in name %}
