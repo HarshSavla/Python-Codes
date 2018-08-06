@@ -35,9 +35,8 @@ def trackPerson(device_id, person_id):
     bandname.append([ban])
     return "OK"
 
-band = (location[1])
-loca = (bandname[1])
-
+band = "AA@"
+loca = "Beacon 1"
 @app.route('/')
 def homepage():
 
