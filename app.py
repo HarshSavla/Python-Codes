@@ -35,12 +35,13 @@ def trackPerson(device_id, person_id):
     bandname.append([ban])
     return "OK"
 
-
+band = (location[1])
+loca = (bandname[1])
 
 @app.route('/')
 def homepage():
 
-    return render_template('Today.html', location=location)
+    return render_template('Today.html', location=location, band=band, loca=loca )
 
 if __name__ == '__main__':
     app.run(debug=True, use_reloader=True)
