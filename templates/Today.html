@@ -80,18 +80,22 @@ footer {
 </nav>
 <h1> Today </h1>
 <table align="center">
+
+{% set L = [1,2,3,4,5,6] %}
+{% set H = 0 %}
+{% for b in L %}
+  {% set H = H + 1 %}
+  <p> {{ H }} </p>
+  {% set H = H + 1 %}
+{% endfor %}
+
+
   <tr>
       <th>Student Name</th>
       <th>Band No.</th>
       <th>Location</th>
       <th>Present/Absent</th>
   </tr>
-{% set L = [1,2,3,4,5,6] %}
-{% set H = -1 %}
-{% for b in L %}
-  {% set H = H + 1 %}
-  <p> {{ H }} </p>
-{% endfor %}
 {% set count = 0 %}
 {% for a in name %}
   {% set stuname = name[count] %}
