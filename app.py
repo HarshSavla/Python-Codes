@@ -12,7 +12,7 @@ L = [1,2,3,4,5,6,7,8,9]
 @app.route('/')
 def homepage():
 
-    return render_template('Today.html', location=location, name=name, L=L)
+    return render_template('Today.html', location=location, name=name)
 
 @app.route('/month')
 def month():
