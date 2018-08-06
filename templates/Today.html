@@ -97,6 +97,7 @@ footer {
   </tr>
 {% set count = 0 %}
 {% for a in name %}
+  {% set count = count+1 %} 
   {% set stuname = name[count] %}
   {% set loc = location[count] %}
   <tr>
