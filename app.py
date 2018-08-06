@@ -33,7 +33,7 @@ def trackPerson(device_id, person_id):
     g.bandname = person_id
     loc = os.environ.get(g.location)
     ban = os.environ.get(g.bandname)
-    data.append([loc, ban])
+    data.extend([loc, ban])
     return "OK"
 
 if __name__ == '__main__':
