@@ -86,10 +86,10 @@ footer {
       <th>Location</th>
       <th>Present/Absent</th>
   </tr>
-{% set H = 2 %}
+{% set H = -1 %}
 {% for b in L %}
   {% set H = H + 1 %}
-  {{ H }}
+  <p> {{ H }} </p>
 {% endfor %}
 {% set count = 0 %}
 {% for a in name %}
