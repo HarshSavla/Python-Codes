@@ -81,11 +81,11 @@ footer {
 <h1> Today </h1>
 <table align="center">
 
-{% set L = [1,2,3,4,5,6] %}
-{% set H = 0 %}
-{% for b in L, set H = H + 1 %}
+{% set p = [1,2,3,4,5,6] %}
+{% set H = 1 %}
+{% for i in p %}
+  {{ H }}
   {% set H = H + 1 %}
-  <p> {{ H }} </p>
 {% endfor %}
 
 
