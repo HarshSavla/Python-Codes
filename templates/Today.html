@@ -90,12 +90,9 @@ footer {
 
 {% set count = 0 -%}
 {% for i in 'a', 'b', 'c' -%}
-  {% for j in 'x', 'y', 'z' -%}
-    i={{i}}, j={{j}}, count={{count}}
-    {% set count = count + 1 -%}
-  {% endfor -%}
+  {% set count = count + 1 -%}
 {% endfor -%}
-
+{{ count }}
   <tr>
       <th>Student Name</th>
       <th>Band No.</th>
