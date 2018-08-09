@@ -8,6 +8,15 @@ import os.path
 location = []
 name = []
 L = [1,2,3,4,5,6,7,8,9]
+key = "jcToDuIv3S3JWlHiPokQ-miqhqDl42juP0vycC7zvEe"
+
+def email_alert(key, band_id, person_name, location):
+    report = {}
+    report["value1"] = band_id
+    report["value2"] = person_name
+    report["value3"] = location
+  
+    requests.post("https://maker.ifttt.com/trigger/update_sheet/with/key/" + str(key), data=report)  
 
 @app.route('/')
 def homepage():
@@ -37,6 +46,7 @@ def trackPerson(device_id, person_id):
     ban = os.environ.get(g.bandname)
     location.append(loc)
     name.append(ban)
+    email_alert (key,g.bandname,ban,loc)
     return "OK"
 
 if __name__ == '__main__':
