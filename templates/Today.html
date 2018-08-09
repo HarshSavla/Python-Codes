@@ -84,8 +84,7 @@ footer {
 {% set p = [1,2,3,4,5,6] %}
 {% set H = 1 %}
 {% for i in p %}
-  {% set H = {{ H + loop.index0 }} %}
-  {{ H }}
+  {{ loop.index }}
 {% endfor %}
 
   <tr>
