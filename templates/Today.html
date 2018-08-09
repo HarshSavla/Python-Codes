@@ -95,7 +95,7 @@ footer {
 
 {% for a in name %}  
   {% set stuname = name[loop.index0] %}
-  {% set loc = location[loopindex0] %}
+  {% set loc = location[loop.index0] %}
   <tr>
     <td>{{ stuname }}</td>  
     <td>{{ count }}</td>
