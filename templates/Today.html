@@ -93,8 +93,7 @@ footer {
       <th>Present/Absent</th>
   </tr>
 
-{% for a in name %} 
-  {% set count = count+1 %} 
+{% for a in name %}  
   {% set stuname = name[loop.index0] %}
   {% set loc = location[loopindex0] %}
   <tr>
