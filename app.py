@@ -18,7 +18,7 @@ def email_alert(key, band_id, person_name, location):
     report["value2"] = person_name
     report["value3"] = location
   
-    requests.post("https://maker.ifttt.com/trigger/update_sheet/with/key/" + str(key), data=report)  
+    requests.post("https://maker.ifttt.com/trigger/updatesheet/with/key/" + str(key), data=report)  
 
 @app.route('/')
 def homepage():
