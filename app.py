@@ -7,9 +7,6 @@ import os.path
 import requests
 
 
-location = []
-name = []
-L = [1,2,3,4,5,6,7,8,9]
 key = "jcToDuIv3S3JWlHiPokQ-miqhqDl42juP0vycC7zvEe"
 
 def email_alert(key, band_id, person_name, location):
