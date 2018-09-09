@@ -1,7 +1,7 @@
 {% extends "layout.html"%}
 {% block content %}
-  {% for post in posts %}
-    <h1> name Was Last Seen At </h1>
-    <h2> location </h2>
+  {% for p in posts %}
+    <h1>{{ name }</h1>
+    <h2>{{ location }}</h2>
   {% endfor %}
 {% endblock content%}
