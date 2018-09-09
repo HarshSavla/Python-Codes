@@ -33,7 +33,7 @@ def month():
 @app.route('/year')
 def year():
 
-    return render_template('This Year.html')
+    return render_template('This Year.html', location=location, name=name)
 
 @app.route('/register')
 def register():
