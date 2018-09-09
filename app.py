@@ -46,14 +46,8 @@ def trackPerson(device_id, person_id):
     g.bandname = person_id
     loc = os.environ.get(g.location)
     ban = os.environ.get(g.bandname)
-    if c == 0:
-        location.append(loc)
-        name.append(ban)
-        c = 1
-    else:
-        if loc != location[-1]:
-            location.append(loc)
-            name.append(ban)
+    location.append(loc)
+    name.append(ban)
     email_alert (key,g.bandname,ban,loc)
     return "OK"
 
