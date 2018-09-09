@@ -23,7 +23,7 @@ def email_alert(key, band_id, person_name, location):
 @app.route('/')
 def homepage():
 
-    return render_template('Today.html', location=location, name=name)
+    return render_template('Today.html', loc=location, name=name)
 
 @app.route('/month')
 def month():
@@ -45,9 +45,7 @@ def trackPerson(device_id, person_id):
     g.location = device_id
     g.bandname = person_id
     loc = os.environ.get(g.location)
-    ban = os.environ.get(g.bandname)
-    location.append(loc)
-    name.append(ban)
+    name = os.environ.get(g.bandname)
     email_alert (key,g.bandname,ban,loc)
     return "OK"
 
