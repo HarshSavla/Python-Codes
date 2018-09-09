@@ -6,10 +6,6 @@ import os
 import os.path
 import requests
 
-
-location = []
-name = []
-
 key = "jcToDuIv3S3JWlHiPokQ-miqhqDl42juP0vycC7zvEe"
 
 def email_alert(key, band_id, person_name, location):
@@ -48,8 +44,8 @@ def trackPerson(device_id, person_id):
     ban = os.environ.get(g.bandname)
     posts = [
         {
-            'location':loc,
-            'name':ban,
+            'location': loc,
+            'name': ban,
         }
     ]
     email_alert (key,g.bandname,ban,loc)
