@@ -6,6 +6,10 @@ import os
 import os.path
 import requests
 
+
+location = []
+name = []
+L = [1,2,3,4,5,6,7,8,9]
 key = "jcToDuIv3S3JWlHiPokQ-miqhqDl42juP0vycC7zvEe"
 
 def email_alert(key, band_id, person_name, location):
@@ -19,7 +23,7 @@ def email_alert(key, band_id, person_name, location):
 @app.route('/')
 def homepage():
 
-    return render_template('Today.html', posts = posts)
+    return render_template('Today.html', location=location, name=name)
 
 @app.route('/month')
 def month():
@@ -42,12 +46,8 @@ def trackPerson(device_id, person_id):
     g.bandname = person_id
     loc = os.environ.get(g.location)
     ban = os.environ.get(g.bandname)
-    posts = [
-        {
-            'location': loc,
-            'name': ban,
-        }
-    ]
+    location.append(loc)
+    name.append(ban)
     email_alert (key,g.bandname,ban,loc)
     return "OK"
 
