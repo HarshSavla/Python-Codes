@@ -24,16 +24,11 @@ def email_alert(key, band_id, person_name, location):
 def homepage():
 
     return render_template('Today.html', location=location, name=name)
-
-@app.route('/month')
-def month():
-
-    return render_template('This Month.html')
 	
-@app.route('/year')
+@app.route('/history')
 def year():
 
-    return render_template('This Year.html', location=location, name=name)
+    return render_template('History.html', location=location, name=name)
 
 @app.route('/register')
 def register():
