@@ -12,6 +12,12 @@ name = []
 f_location = [] 
 key = "jcToDuIv3S3JWlHiPokQ-miqhqDl42juP0vycC7zvEe"
 
+def remove(location): 
+    for num in location: 
+        if num not in f_location: 
+            f_location.append(num) 
+    return f_location 
+
 def email_alert(key, band_id, person_name, location):
     report = {}
     report["value1"] = band_id
@@ -43,9 +49,7 @@ def trackPerson(device_id, person_id):
     ban = os.environ.get(g.bandname)
     location.append(loc)
     name.append(ban)
-    for num in location: 
-        if num not in f_location: 
-            f_location.append(num) 
+    remove(location)
     email_alert (key,g.bandname,ban,loc)
     return "OK"
 
