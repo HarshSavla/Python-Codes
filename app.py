@@ -46,7 +46,7 @@ def trackPerson(device_id, person_id):
     else 
         location.append(loc)
         name.append(ban)
-    semail_alert (key,g.bandname,ban,loc)
+    email_alert (key,g.bandname,ban,loc)
     return "OK"
 
 if __name__ == '__main__':
