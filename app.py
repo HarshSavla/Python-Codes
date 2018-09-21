@@ -9,7 +9,7 @@ import requests
 c = 0
 location = []
 name = []
-L = [1,2,3,4,5,6,7,8,9]
+f_location = [] 
 key = "jcToDuIv3S3JWlHiPokQ-miqhqDl42juP0vycC7zvEe"
 
 def email_alert(key, band_id, person_name, location):
@@ -23,12 +23,12 @@ def email_alert(key, band_id, person_name, location):
 @app.route('/')
 def homepage():
 
-    return render_template('Today.html', location=location, name=name)
+    return render_template('Today.html', f_location=location, name=name)
 	
 @app.route('/history')
 def year():
 
-    return render_template('History.html', location=location, name=name)
+    return render_template('History.html', f_location=location, name=name)
 
 @app.route('/register')
 def register():
@@ -43,6 +43,9 @@ def trackPerson(device_id, person_id):
     ban = os.environ.get(g.bandname)
     location.append(loc)
     name.append(ban)
+    for num in location: 
+        if num not in f_location: 
+            f_location.append(num) 
     email_alert (key,g.bandname,ban,loc)
     return "OK"
 
