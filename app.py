@@ -6,16 +6,15 @@ import os
 import os.path
 import requests
 
-c = 0
 location = []
 name = []
 f_location = [] 
 key = "jcToDuIv3S3JWlHiPokQ-miqhqDl42juP0vycC7zvEe"
 
 def remove(location): 
-    for num in location: 
-        if num not in f_location: 
-            f_location.append(num) 
+    for a in location: 
+        if a not in f_location: 
+            f_location.append(a) 
     return f_location 
 
 def email_alert(key, band_id, person_name, location):
@@ -29,12 +28,12 @@ def email_alert(key, band_id, person_name, location):
 @app.route('/')
 def homepage():
 
-    return render_template('Today.html', f_location=location, name=name)
+    return render_template('Today.html', location=f_location, name=name)
 	
 @app.route('/history')
 def year():
 
-    return render_template('History.html', f_location=location, name=name)
+    return render_template('History.html', location=f_location, name=name)
 
 @app.route('/register')
 def register():
@@ -55,4 +54,3 @@ def trackPerson(device_id, person_id):
 
 if __name__ == '__main__':
     app.run(debug=True, use_reloader=True)
-    
