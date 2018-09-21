@@ -41,9 +41,12 @@ def trackPerson(device_id, person_id):
     g.bandname = person_id
     loc = os.environ.get(g.location)
     ban = os.environ.get(g.bandname)
-    location.append(loc)
-    name.append(ban)
-    email_alert (key,g.bandname,ban,loc)
+    if loc = location[-1]
+
+    else 
+        location.append(loc)
+        name.append(ban)
+    semail_alert (key,g.bandname,ban,loc)
     return "OK"
 
 if __name__ == '__main__':
