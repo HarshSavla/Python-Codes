@@ -1,7 +1,7 @@
 {% extends "layout.html"%}
 {% block content %}
     <h1>History</h1>
-    <h2> {{ name[-1] Has Been To }} </h2>
+    <h2> {{ name[-1] }} Has Been To </h2>
     {% for a in location %}
         {% set loc = location[loop.index0] %}
         <h3> {{ loc }} </h3>
