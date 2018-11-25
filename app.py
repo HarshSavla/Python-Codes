@@ -56,7 +56,19 @@ def trackPerson(device_id, person_id):
     name.append(ban)
     remove(location)
     email_alert (key,g.bandname,ban,loc)
-    tim = str(datetime.now())
+    tim = list(str(datetime.now()))
+    tim[10] = ", "
+    tim[16] = ''
+    tim[17] = ''
+    tim[18] = ''
+    tim[19] = ''
+    tim[20] = ''
+    tim[21] = ''
+    tim[22] = ''
+    tim[23] = ''
+    tim[24] = ''
+    tim[25] = ''
+    tim = "".join(tim)
     tip.append(tim)
     return tim
 
