@@ -19,7 +19,7 @@ def remove(location):
     return f_location 
 
 def timg(now): 
-    time = now
+    time = str(now)
     return time 
 
 def email_alert(key, band_id, person_name, location):
