@@ -9,13 +9,15 @@ import requests
 location = []
 name = []
 f_location = [] 
+time = ""
 key = "jcToDuIv3S3JWlHiPokQ-miqhqDl42juP0vycC7zvEe"
 
-def remove(location): 
+def remove(location, now): 
     for a in location: 
         if a not in f_location: 
-            f_location.append(a) 
-    return f_location 
+            f_location.append(a)
+    now = time 
+    return f_location, time 
 
 def email_alert(key, band_id, person_name, location):
     report = {}
@@ -28,7 +30,7 @@ def email_alert(key, band_id, person_name, location):
 @app.route('/')
 def homepage():
 
-    return render_template('Today.html', location=f_location, name=name, now=now)
+    return render_template('Today.html', location=f_location, name=name, now=time)
 	
 @app.route('/history')
 def year():
