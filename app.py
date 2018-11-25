@@ -10,6 +10,7 @@ location = []
 name = []
 retu = "time"
 f_location = []
+tip = []
 key = "jcToDuIv3S3JWlHiPokQ-miqhqDl42juP0vycC7zvEe"
 
 def utctime():
@@ -33,7 +34,7 @@ def email_alert(key, band_id, person_name, location):
 @app.route('/')
 def homepage():
 
-    return render_template('Today.html', location=f_location, name=name, tim=tim)
+    return render_template('Today.html', location=f_location, name=name, tip=tip)
 	
 @app.route('/history')
 def year():
@@ -56,6 +57,7 @@ def trackPerson(device_id, person_id):
     remove(location)
     email_alert (key,g.bandname,ban,loc)
     tim = str(datetime.now())
+    tip.append(tim)
     return tim
 
 if __name__ == '__main__':
