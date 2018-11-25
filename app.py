@@ -19,7 +19,7 @@ def remove(location):
             f_location.append(a) 
     return f_location 
 
-def remove(now):
+def time(now):
    now = time
    return time
 
