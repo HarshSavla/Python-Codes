@@ -9,7 +9,7 @@ import requests
 location = []
 name = []
 retu = "time"
-tim = str(datetime.now())
+tim = str(istdatetime.now())
 f_location = []
 key = "jcToDuIv3S3JWlHiPokQ-miqhqDl42juP0vycC7zvEe"
 
