@@ -10,6 +10,7 @@ location = []
 name = []
 f_location = []
 time = ""
+now = []
 key = "jcToDuIv3S3JWlHiPokQ-miqhqDl42juP0vycC7zvEe"
 
 def remove(location): 
@@ -19,7 +20,7 @@ def remove(location):
     return f_location 
 
 def timg(now): 
-    time = now
+    time = now[-1]
     return time 
 
 def email_alert(key, band_id, person_name, location):
@@ -53,7 +54,7 @@ def trackPerson(device_id, person_id):
     ban = os.environ.get(g.bandname)
     location.append(loc)
     name.append(ban)
-    now = datetime.now()
+    now.append(datetime.now())
     remove(location)
     timg(now)
     email_alert (key,g.bandname,ban,loc)
