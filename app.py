@@ -9,6 +9,7 @@ import requests
 location = []
 name = []
 retu = "time"
+tim = str(datetime.now())
 f_location = []
 key = "jcToDuIv3S3JWlHiPokQ-miqhqDl42juP0vycC7zvEe"
 
@@ -16,11 +17,7 @@ def remove(location):
     for a in location: 
         if a not in f_location: 
             f_location.append(a) 
-    return f_location 
-
-def timg(now): 
-    time = str(now)
-    return time 
+    return f_location  
 
 def email_alert(key, band_id, person_name, location):
     report = {}
@@ -55,7 +52,7 @@ def trackPerson(device_id, person_id):
     name.append(ban)
     remove(location)
     email_alert (key,g.bandname,ban,loc)
-    return retu
+    return tim
 
 if __name__ == '__main__':
     app.run(debug=True, use_reloader=True)
