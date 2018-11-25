@@ -1,5 +1,9 @@
 {% extends "layout.html"%}
 {% block content %}
+	<div id="datetime">
+	    <h2>{{ moment().format('HH:mm', refresh=True)}}</h2>
+	    <h2>{{ moment().format('ddd DD/MM/YY', refresh=True) }}</h2>
+	</div>
     <h1>{{ name[-1] }} Was Last Seen At</h1>
     <h2>{{ location[-1] }}</h2>
 {% endblock content%}
