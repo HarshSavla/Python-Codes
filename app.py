@@ -8,9 +8,8 @@ import requests
 
 location = []
 name = []
+retu = "time"
 f_location = []
-time = ""
-now = ""
 key = "jcToDuIv3S3JWlHiPokQ-miqhqDl42juP0vycC7zvEe"
 
 def remove(location): 
@@ -34,7 +33,7 @@ def email_alert(key, band_id, person_name, location):
 @app.route('/')
 def homepage():
 
-    return render_template('Today.html', location=f_location, name=name, time=time)
+    return render_template('Today.html', location=f_location, name=name)
 	
 @app.route('/history')
 def year():
@@ -54,11 +53,9 @@ def trackPerson(device_id, person_id):
     ban = os.environ.get(g.bandname)
     location.append(loc)
     name.append(ban)
-    now = datetime.now()
     remove(location)
-    timg(now)
     email_alert (key,g.bandname,ban,loc)
-    return now
+    return retu
 
 if __name__ == '__main__':
     app.run(debug=True, use_reloader=True)
