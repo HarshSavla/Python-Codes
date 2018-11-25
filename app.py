@@ -9,6 +9,7 @@ import requests
 location = []
 name = []
 f_location = []
+time = ""
 key = "jcToDuIv3S3JWlHiPokQ-miqhqDl42juP0vycC7zvEe"
 
 def remove(location): 
