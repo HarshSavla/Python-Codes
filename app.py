@@ -9,7 +9,9 @@ import requests
 location = []
 name = []
 retu = "time"
-tim = str(istdatetime.now())
+def utctime():
+    tim = str(datetime.now())
+    return tim 
 f_location = []
 key = "jcToDuIv3S3JWlHiPokQ-miqhqDl42juP0vycC7zvEe"
 
@@ -30,7 +32,7 @@ def email_alert(key, band_id, person_name, location):
 @app.route('/')
 def homepage():
 
-    return render_template('Today.html', location=f_location, name=name)
+    return render_template('Today.html', location=f_location, name=name,tim=tim)
 	
 @app.route('/history')
 def year():
@@ -52,7 +54,8 @@ def trackPerson(device_id, person_id):
     name.append(ban)
     remove(location)
     email_alert (key,g.bandname,ban,loc)
-    return tim
+    utctime()
+    return "ok"
 
 if __name__ == '__main__':
     app.run(debug=True, use_reloader=True)
