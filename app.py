@@ -18,9 +18,9 @@ def remove(location):
             f_location.append(a) 
     return f_location 
 
-def time(now):
-   time = str(now)
-   return time
+def timg(now): 
+    time = now
+    return time 
 
 def email_alert(key, band_id, person_name, location):
     report = {}
@@ -53,9 +53,10 @@ def trackPerson(device_id, person_id):
     ban = os.environ.get(g.bandname)
     location.append(loc)
     name.append(ban)
-    remove(location)
-    email_alert (key,g.bandname,ban,loc)
     now = datetime.now()
+    remove(location)
+    timg(now)
+    email_alert (key,g.bandname,ban,loc)
     return "OK"
 
 if __name__ == '__main__':
