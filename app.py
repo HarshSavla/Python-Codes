@@ -9,8 +9,6 @@ import requests
 location = []
 name = []
 f_location = []
-now = "" 
-time = ""
 key = "jcToDuIv3S3JWlHiPokQ-miqhqDl42juP0vycC7zvEe"
 
 def remove(location): 
@@ -20,7 +18,7 @@ def remove(location):
     return f_location 
 
 def time(now):
-   now = time
+   time = now
    return time
 
 def email_alert(key, band_id, person_name, location):
