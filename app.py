@@ -52,7 +52,7 @@ def trackPerson(device_id, person_id):
     name.append(ban)
     remove(location)
     email_alert (key,g.bandname,ban,loc)
-    now = [datetime.now()]
+    now = datetime.now()
     return "OK"
 
 if __name__ == '__main__':
