@@ -33,7 +33,7 @@ def email_alert(key, band_id, person_name, location):
 @app.route('/')
 def homepage():
 
-    return render_template('Today.html', location=f_location, name=name)
+    return render_template('Today.html', location=f_location, name=name, tim=tim)
 	
 @app.route('/history')
 def year():
