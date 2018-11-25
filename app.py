@@ -10,6 +10,7 @@ location = []
 name = []
 f_location = []
 time = ""
+now = ""
 key = "jcToDuIv3S3JWlHiPokQ-miqhqDl42juP0vycC7zvEe"
 
 def remove(location): 
