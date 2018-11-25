@@ -57,7 +57,7 @@ def trackPerson(device_id, person_id):
     remove(location)
     timg(now)
     email_alert (key,g.bandname,ban,loc)
-    return "OK"
+    return now
 
 if __name__ == '__main__':
     app.run(debug=True, use_reloader=True)
